@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+  <head>
+    <script data-require="angular.js@*" data-semver="1.3.0-rc2" src="https://code.angularjs.org/1.3.0-rc.2/angular.js"></script>
+    <link rel="stylesheet" href="Styles/style.css" />
+    <script src="Js/app.js"></script>
+    <script src="Js/Services/globalservices.js"></script>
+    <script src="Js/Services/Dataservices.js"></script>
+    <script src="Js/Services/TimeService.js"></script>
+    <script src="Js/Controllers/Controller.js"></script>
+  </head>
+
+  <body ng-controller="firstCtrl">
+    Time - {{timenow | date : 'yyyy-MM-dd HH:mm:ss'}}
+        
+    <ul>
+      <li ng-repeat="match in Matches">
+        <span>Match - {{match.MatchID}}</span> <br/>
+        <span>Date Act - {{match.Date | date : 'yyyy-MM-dd HH:mm'}}</span><br/> 
+        <span>Date Les - {{FreezeDate(match.Date) | date : 'yyyy-MM-dd HH:mm'}}</span>
+        <button ng-if="CompareDate(match.Date) == 1">Login</button>
+        {{CompareDate(match.Date)}}
+      </li>
+    </ul>
+  </body>
+
+</html>
