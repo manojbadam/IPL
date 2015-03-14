@@ -1,1 +1,1 @@
-This is a hobby project and not sure how far i can spend time on this. 
+This is a hobby project.
