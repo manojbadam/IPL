@@ -6,7 +6,9 @@
 	"Team2ID" : "MI",
 	"MatchResult" : "Yes",
 	"WinningTeamID" : "KKR",
-	"MatchID" : "1"
+	"MatchID" : "1",
+	"Team1ImgUrl" : "Images/KKR.gif",
+	"Team2ImgUrl" : "Images/MI.gif"
 },
 {
 	"Venue" : "MA Chidambaram Stadium, Chennai",
@@ -15,6 +17,8 @@
 	"Team2ID" : "DD",
 	"MatchResult" : "Yes",
 	"WinningTeamID" : "CSK",
-	"MatchID" : "2"
+	"MatchID" : "2",
+	"Team1ImgUrl" : "Images/CSK.gif",
+	"Team2ImgUrl" : "Images/DD.jpg"
 }
 ]

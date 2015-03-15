@@ -1,2 +1,82 @@
 /* Styles go here */
 
+.team-Logo-small
+{
+	height: 100px;
+	width: 100px;
+	display: inline;
+	vertical-align: middle;
+}
+
+.team-Name
+{
+	vertical-align: middle;
+	display: inline;
+}
+
+.match-Header
+{
+	font-size: 36px;
+	font-family: BentonSansBold,​Arial,​sans-serif;
+	display: inline;
+	font-weight: 500;
+	font-style: normal;
+	font-variant: normal;
+	text-align: left;
+}
+
+.match-sub-Header
+{
+	font-size: 24px;
+	font-family: BentonSansBold,​Arial,​sans-serif;
+	display: inline;
+	font-weight: 500;
+	font-style: normal;
+	font-variant: normal;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.outerbox
+{
+	width: 650px;
+	border: 2px solid black;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+hr.style-two
+{
+	border: 0; 
+	height: 1px; 
+	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+	background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+	background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+	background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+
+.match-body{
+	font-family: BentonSansBold,​Arial,​sans-serif;
+	font-family: 12px;
+}
+
+.body-inline{
+	text-align: left;
+	display: inline;
+	vertical-align: middle;
+}
+
+
+.header-date-format{
+	vertical-align: top;
+	padding-right: 200px;
+}
+
+.body-inline-left{
+
+}
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}

@@ -1,14 +1,20 @@
 <html ng-app="app">
 	<head>
 		<script data-require="angular.js@*" data-semver="1.3.0-rc2" src="https://code.angularjs.org/1.3.0-rc.2/angular.js"></script>
+	    <link rel="stylesheet" href="Styles/style.css" />
+	    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
 	    <script src="Js/app.js"></script>
 	    <script src="Js/Services/globalservices.js"></script>
+	    <script src="Js/Services/Dataservices.js"></script>
     	<script src="Js/Services/TimeService.js"></script>
     	<script src="Js/Directives/timerDirective.js"></script>
     	<script src="test.js"></script>
 	</head>
-	<body>
+	<body ng-controller="testCtrl">
 		<!-- <span ng-controller='testCtrl'>{{nowDate}} , {{DisplayDate}}</span> -->
-		<my-directive Date="2015-03-14T01:30:00" />
+		<div ng-repeat="matchobj in Matches">
+			<my-directive Date="{{matchobj.Date}}" match="matchobj" />
+		</div>
+		<!-- <span>{{matchobj}}</span> -->
 	</body>
 </html>

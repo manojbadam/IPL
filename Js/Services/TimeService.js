@@ -69,11 +69,11 @@ app.service('TimeFnService',function(globalService){
 		var t2 = dateB.getTime();
 		var diff = t1-t2;
 		obj["timeDays"] = parseInt((diff)/(24*3600*1000));
-		diff = diff - 	$scope.timeDays*24*3600*1000;
+		diff = diff - 	obj["timeDays"]*24*3600*1000;
 		obj["timeHrs"] = parseInt((diff)/(3600*1000));
-		diff = diff - $scope.timeHrs*3600*1000;
+		diff = diff - obj["timeHrs"]*3600*1000;
 		obj["timeMins"] = parseInt((diff)/(60*1000));
-		diff = diff - $scope.timeMins * 60 * 1000;
+		diff = diff - obj["timeMins"]* 60 * 1000;
 		obj["timeSecs"] = parseInt((diff)/(1000));
 		return obj;
 	}

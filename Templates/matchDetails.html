@@ -1,18 +1,44 @@
-<div>
-	<h1>Match {{MatchID}}</h1>
-	<div>
-		<img ng-src="Team1ImgUrl" class="Team-Logo-small" /> {{Team1ID}} <h1>Vs</h1> 
-		<img ng-src="Team2ImgUrl" class="Team-Logo-small" /> {{Team2ID}}
+<div class="outerbox">
+	<div class="row">
+		<div class="col-md-7">
+			<span class="match-Header">Match - {{match.MatchID}}</span>
+		</div>
+		<div class="col-md-5">
+			<span>Date : {{match.Date | date : 'yyyy-MMM-dd'}}</span>
+		</div>
+		<div class="cold-md-7">
+		</div>
+		<div class="col-md-5">
+			<span>Venue : {{match.matchVenue}}</span>
+		</div>	
 	</div>
-	<div ng-if="flag">
-	Pick your Choice :	<input type="radio" ng-model="selection" value="{{Team1ID}}"> {{Team1ID}} &nbsp; &nbsp; &nbsp;
-		<input  type="radio" ng-model="selection" value="{{Team2ID}}"> {{Team2ID}} &nbsp; &nbsp; &nbsp; 
-		<button ng-click="submit()"></button>
+		<hr class="style-two" />
+	
+	<div style="padding-left:150px;padding-bottom:10px;">
+		<img ng-src="{{match.Team1ImgUrl}}" class="team-Logo-small" title="{{match.Team1ID}}" /> <!-- <span class="team-Name"> {{match.Team1ID}} </span> --> 
+		<span class="match-sub-Header">Vs</span> 
+		<img ng-src="{{match.Team2ImgUrl}}" class="team-Logo-small" title="{{match.Team2ID}}" />  <!-- <span class="team-Name"> {{match.Team2ID}} </span> -->
 	</div>
+	
 	<div ng-if="!flag">
+		<div class="row">
+			<div class="col-md-3 vcenter">
+				<span> Pick your Choice :	</span>
+			</div>
+			<div class="col-md-4" class="btn-group">	
+				<label class="btn btn-default"><input type="radio" ng-model="match.selection" value="{{match.Team1ID}}"> {{match.Team1ID}}</label> 
+				<label class="btn btn-default"><input  type="radio" ng-model="match.selection" value="{{match.Team2ID}}"> {{match.Team2ID}}</label> 
+			</div>
+			<div class="col-md-5">
+				<button ng-click="submit()" class="btn btn-primary">Submit</button>
+			</div>	
+		</div>
+	</div>	
+	<div ng-if="flag">
 		<span>Time elapsed for this match selection. </span>
 	</div>
 	<div>
-		<span>Match Begins in : {{timeDays}} days {{timeHrs}} hours {{timeMins}} mins {{timeSecs}} secs</span>
+		<span>Match Begins in : {{time.timeDays}} days {{time.timeHrs}} hours {{time.timeMins}} mins {{time.timeSecs}} secs</span>
 	</div>
+
 </div>
