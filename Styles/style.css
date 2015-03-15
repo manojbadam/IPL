@@ -2,8 +2,8 @@
 
 .team-Logo-small
 {
-	height: 100px;
-	width: 100px;
+	height: 75px;
+	width: 75px;
 	display: inline;
 	vertical-align: middle;
 }
@@ -16,18 +16,19 @@
 
 .match-Header
 {
-	font-size: 36px;
+	font-size: 24px;
 	font-family: BentonSansBold,​Arial,​sans-serif;
 	display: inline;
 	font-weight: 500;
 	font-style: normal;
 	font-variant: normal;
 	text-align: left;
+	color: #592D23;
 }
 
 .match-sub-Header
 {
-	font-size: 24px;
+	font-size: 18px;
 	font-family: BentonSansBold,​Arial,​sans-serif;
 	display: inline;
 	font-weight: 500;
@@ -40,9 +41,12 @@
 .outerbox
 {
 	width: 650px;
-	border: 2px solid black;
+	border: 1px solid #fff;
 	border-radius: 10px;
 	padding: 10px;
+	margin-bottom: 10px;
+	margin-left : 20px;
+	background-color: #F8CE80;
 }
 
 hr.style-two
@@ -79,4 +83,11 @@ hr.style-two
     display: inline-block;
     vertical-align: middle;
     float: none;
+}
+
+.small-text
+{
+	font-size: 10px;
+	color: #815F3A;
+	/*color: #91827E;*/
 }

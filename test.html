@@ -11,10 +11,8 @@
     	<script src="test.js"></script>
 	</head>
 	<body ng-controller="testCtrl">
-		<!-- <span ng-controller='testCtrl'>{{nowDate}} , {{DisplayDate}}</span> -->
 		<div ng-repeat="matchobj in Matches">
 			<my-directive Date="{{matchobj.Date}}" match="matchobj" />
 		</div>
-		<!-- <span>{{matchobj}}</span> -->
 	</body>
 </html>
