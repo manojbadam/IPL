@@ -1,18 +1,17 @@
+<div class="container">
 <div class="outerbox">
-	<div class="row">
-		<div class="col-md-7">
+	<div class="wrap">
+		<div class="left-block">
 			<span class="match-Header">Match - {{match.MatchID}}</span>
 		</div>
-		<div class="col-md-5">
+		<div class="right-block">
 			<span class="small-text">Date : {{match.Date | date : 'yyyy-MMM-dd'}}</span>
-		</div>
-		<div class="cold-md-7">
-		</div>
-		<div class="col-md-5">
+			<br/>
 			<span class="small-text">Venue : {{match.Venue}}</span>
-		</div>	
+		</div>
+		<div class="clear"></div>
 	</div>
-		<!-- <hr class="style-two" /> -->
+		<hr class="style-two" />
 	
 	<div style="padding-left:130px;padding-bottom:10px;">
 		<img ng-src="{{match.Team1ImgUrl}}" class="team-Logo-small" title="{{match.Team1ID}}" /> <!-- <span class="team-Name"> {{match.Team1ID}} </span> --> 
@@ -42,4 +41,5 @@
 		<span class="warning">Match Begins in : {{time.timeDays}} days {{time.timeHrs}} hours {{time.timeMins}} mins {{time.timeSecs}} secs</span>
 	</div>
 
+</div>
 </div>

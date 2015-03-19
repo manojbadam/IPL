@@ -91,3 +91,18 @@ hr.style-two
 	color: #815F3A;
 	/*color: #91827E;*/
 }
+
+.left-block
+{
+	float:left;
+}
+
+.right-block
+{
+	float: right;
+}
+
+.clear
+{
+	clear:both;
+}
