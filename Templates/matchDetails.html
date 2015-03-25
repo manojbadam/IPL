@@ -2,21 +2,21 @@
 <div class="outerbox">
 	<div class="wrap">
 		<div class="left-block">
-			<span class="match-Header">Match - {{match.MatchID}}</span>
+			<span class="match-Header">Match - {{match.matchid}}</span>
 		</div>
 		<div class="right-block">
-			<span class="small-text">Date : {{match.Date | date : 'yyyy-MMM-dd'}}</span>
+			<span class="small-text">Date : {{match.Matchdate | date : 'yyyy-MMM-dd'}}</span>
 			<br/>
-			<span class="small-text">Venue : {{match.Venue}}</span>
+			<span class="small-text">Venue : {{match.venue}}</span>
 		</div>
 		<div class="clear"></div>
 	</div>
 		<hr class="style-two" />
 	
 	<div style="padding-left:130px;padding-bottom:10px;">
-		<img ng-src="{{match.Team1ImgUrl}}" class="team-Logo-small" title="{{match.Team1ID}}" /> <!-- <span class="team-Name"> {{match.Team1ID}} </span> --> 
+		<img ng-src="Images/{{match.Team1ImgUrl}}" class="team-Logo-small" title="{{match.team1id}}" /> <!-- <span class="team-Name"> {{match.Team1ID}} </span> --> 
 		<span class="match-sub-Header">Vs</span> 
-		<img ng-src="{{match.Team2ImgUrl}}" class="team-Logo-small" title="{{match.Team2ID}}" />  <!-- <span class="team-Name"> {{match.Team2ID}} </span> -->
+		<img ng-src="Images/{{match.Team2ImgUrl}}" class="team-Logo-small" title="{{match.team2id}}" />  <!-- <span class="team-Name"> {{match.Team2ID}} </span> -->
 	</div>
 	
 	<div ng-if="!flag">
@@ -24,22 +24,25 @@
 			<div class="col-md-3 vcenter">
 				<span> Pick your Choice :	</span>
 			</div>
-			<div class="col-md-6 btn-group" >	
-				<label class="btn btn-default"><input type="radio" ng-model="match.selection" value="{{match.Team1ID}}"> {{match.Team1ID}}</label> 
-				<label class="btn btn-default"><input  type="radio" ng-model="match.selection" value="{{match.Team2ID}}"> {{match.Team2ID}}</label> 
+			<div class="col-md-6 btn-group">	
+				<label class="btn btn-default"><input type="radio" ng-model="match.selection" value="{{match.team1id}}">{{match.team1id}}</label> 
+				<label class="btn btn-default"><input  type="radio" ng-model="match.selection" value="{{match.team2id}}"> {{match.team2id}}</label> 
 				<label class="btn btn-default"><input type="radio" ng-model="match.selection" value="0">Not Intrested </label>
 			</div>
 			<div class="col-md-3">
-				<button ng-click="submit()" class="btn btn-primary">Vote</button>
+				<button ng-click="submit(match)" class="btn btn-primary">Vote</button>
 			</div>	
 		</div>
+	</div>
+	<div>
+			<span>{{html}}</span>
 	</div>	
-	<div ng-if="flag">
+	<!-- <div ng-if="flag">
 		<span>Time elapsed for this match selection. </span>
 	</div>
 	<div ng-if="!flag">
 		<span class="warning">Match Begins in : {{time.timeDays}} days {{time.timeHrs}} hours {{time.timeMins}} mins {{time.timeSecs}} secs</span>
-	</div>
+	</div> -->
 
 </div>
 </div>
