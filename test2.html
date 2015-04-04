@@ -9,55 +9,12 @@
 	    <script src="Js/Services/globalservices.js"></script>
 	    <script src="Js/Services/Dataservices.js"></script>
     	<script src="Js/Services/TimeService.js"></script>
-    	<script src="Js/Directives/timerDirective.js"></script>
+    	<script src="testDirective.js"></script>
     	<script src="test2.js"></script>
 	</head>
 	<body ng-controller="testCtrl">
 		<div ng-repeat="match in matches">
-			<div class="container-fluid col-xs-12 col-lg-6">
-				<div class="container" style="max-width: 600px;margin:10px auto;border:1px solid black">	
-					 <div class="row">
-						<div class="col-xs-12">
-							<div class="left-block">
-								<span class="match-Header">Match - {{match.matchid}}</span>
-							</div>
-							<div class="right-block">
-								<span class="small-text">Date : {{match.Matchdate | date : 'yyyy-MMM-dd'}}</span>
-								<br/>
-								<span class="small-text">Venue : {{match.venue}}</span>
-							</div>
-							<!-- <div class="clear"></div> -->	
-							<div ng-show="Displayflag">
-								<div style="text-align:center;">
-									<span>Time Remaining : 60mins</span>
-								</div>
-							</div>
-						</div>
-					</div> 
-					
-					<div class="row">
-						<div class="col-xs-6 col-xs-offset-3">
-							<img ng-src="Images/{{match.Team1ImgUrl}}" class="team-Logo-small" title="{{match.team1id}}" /> 
-							<span class="match-sub-Header">Vs</span> 
-							<img ng-src="Images/{{match.Team2ImgUrl}}" class="team-Logo-small" title="{{match.team2id}}" /> 
-						</div>
-					</div> 
-					<div class="row">
-						<div class="col-xs-3">
-							<span> Pick your Choice :	</span>
-						</div>
-						<div class="col-xs-7 btn-group">	
-							<label class="btn btn-default"><input type="radio" ng-model="match.selection" value="{{match.team1id}}">{{match.team1id}}</label> 
-							<label class="btn btn-default"><input  type="radio" ng-model="match.selection" value="{{match.team2id}}"> {{match.team2id}}</label> 
-							<label class="btn btn-default"><input type="radio" ng-model="match.selection" value="0">Not Intrested </label>
-						</div>
-						<div class="col-xs-2">
-							<button ng-click="submit(match)" class="btn btn-primary">Vote</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		<!-- <button ng-click="Insert(match.matchid,match.selection)">Click Me</button> -->
+			<test-directive match="match" date="match.Matchdate" />
 		</div>
 	</body>
 </html>		
