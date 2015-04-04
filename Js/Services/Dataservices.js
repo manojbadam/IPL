@@ -1,7 +1,7 @@
-// app.service('MatchService',function($http){
+ // app.service('MatchService',function($http){
 	
-// 	this.data = $http.get('details/Matches.json');
-// })
+ // 	this.data = $http.get('details/Matches.json');
+ // })
 
 app.service('MatchService',function($http){
 	this.data = $http.get('http://localhost:5433/getMatcheDetails');

@@ -12,14 +12,57 @@
     	<script src="example.js"></script>
 	</head>
 	<body ng-controller="testCtrl">
-		<div >
+		<!-- <div >
 			{{resultHTML}}
 		</div>
 		<br>
 		<br>
 		<button ng-click="Insert()">Click Me</button>
-		<!-- <div ng-repeat="matchobj in Matches">
+		<div ng-repeat="matchobj in Matches">
 			<my-directive Date="{{matchobj.Matchdate}}" match="matchobj" />
 		</div> -->
+	<div ng-repeat="match in matches"> 
+		<div class="container">
+			<div class="outerbox">
+				<div class="wrap">
+					<div class="left-block">
+						<span class="match-Header">Match - {{match.matchid}}</span>
+					</div>
+					<div class="right-block">
+						<span class="small-text">Date : {{match.Matchdate | date : 'yyyy-MMM-dd'}}</span>
+						<br/>
+						<span class="small-text">Venue : {{match.venue}}</span>
+					</div>
+					<div class="clear"></div>
+				</div>
+					<hr class="style-two" />
+				
+				<div style="padding-left:130px;padding-bottom:10px;">
+					<img ng-src="Images/{{match.Team1ImgUrl}}" class="team-Logo-small" title="{{match.team1id}}" /> <!-- <span class="team-Name"> {{match.Team1ID}} </span> --> 
+					<span class="match-sub-Header">Vs</span> 
+					<img ng-src="Images/{{match.Team2ImgUrl}}" class="team-Logo-small" title="{{match.team2id}}" />  <!-- <span class="team-Name"> {{match.Team2ID}} </span> -->
+				</div>
+				
+				<div ng-if="!flag">
+					<div class="row">
+						<div class="col-md-3 vcenter">
+							<span> Pick your Choice :	</span>
+						</div>
+						<div class="col-md-6 btn-group">	
+							<label class="btn btn-default"><input type="radio" ng-model="match.selection" value="{{match.team1id}}">{{match.team1id}}</label> 
+							<label class="btn btn-default"><input  type="radio" ng-model="match.selection" value="{{match.team2id}}"> {{match.team2id}}</label> 
+							<label class="btn btn-default"><input type="radio" ng-model="match.selection" value="0">Not Intrested </label>
+						</div>
+						<div class="col-md-3">
+							<button ng-click="submit(match)" class="btn btn-primary">Vote</button>
+						</div>	
+					</div>
+				</div>
+				<div>
+						<span>{{html}}</span>
+				</div>	
+			</div>
+		</div>
+	</div>
 	</body>	
 </html>

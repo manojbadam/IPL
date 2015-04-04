@@ -4,8 +4,13 @@
 {
 	height: 75px;
 	width: 75px;
-	display: inline;
-	vertical-align: middle;
+	/*display: inline;
+	vertical-align: middle;*/
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
 }
 
 .team-Name
@@ -87,7 +92,7 @@ hr.style-two
 
 .small-text
 {
-	font-size: 10px;
+		
 	color: #815F3A;
 	/*color: #91827E;*/
 }
@@ -105,4 +110,10 @@ hr.style-two
 .clear
 {
 	clear:both;
+}
+
+.middle-block
+{
+	text-align: center;
+	vertical-align: middle;
 }
