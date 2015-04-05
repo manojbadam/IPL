@@ -1,4 +1,4 @@
-<div class="container-fluid col-xs-12 col-lg-6">
+<div class="container-fluid col-xs-12 col-lg-8">
 				<div class="container" style="max-width: 650px;margin:10px auto;border:1px solid black">	
 					 <div class="row">
 						<div class="col-xs-12">
@@ -30,17 +30,17 @@
 							<span> Pick your Choice :	</span>
 						</div>
 						<div class="col-xs-7 btn-group">	
-							<label class="btn btn-default"><input type="radio" ng-model="match.selection" value="{{match.team1id}}">{{match.team1id}}</label> 
+							<label class="btn btn-default"><input type="radio" ng-model="match.selection" value="{{match.team1id}}"> {{match.team1id}}</label> 
 							<label class="btn btn-default"><input  type="radio" ng-model="match.selection" value="{{match.team2id}}"> {{match.team2id}}</label> 
-							<label class="btn btn-default"><input type="radio" ng-model="match.selection" value="0">Not Intrested </label>
+							<label class="btn btn-default"><input type="radio" ng-model="match.selection" value="0"> Cannot Choose <img src="Images/smiley.gif" alt="Smiley face" width="20" height="20" /></label>
 						</div>
 						<div class="col-xs-2">
-							<button ng-click="submit(match)" class="btn btn-primary">Vote</button>
+							<button ng-click="submit(match)" ng-disabled="match.dbselection == 1" class="btn btn-primary">Vote</button>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-xs-12">
-							<span>Result - {{}} won the match</span>
+							<span>Result - {{match.dbselection}} won the match</span>
 						</div>
 					</div>	
 				</div>

@@ -1,7 +1,7 @@
 app.service('TimeFnService',function(globalService){
-	this.compareDate = function(dateA){
+	this.compareDate = function(dateA,dateB){
 		var a = new Date(dateA);
-    	var b = new Date();
+    	var b = new Date(dateB);
 
     	var msDateA = Date.UTC(a.getFullYear(), a.getMonth()+1, a.getDate());
     	var msDateB = Date.UTC(b.getFullYear(), b.getMonth()+1, b.getDate());

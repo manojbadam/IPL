@@ -117,3 +117,32 @@ hr.style-two
 	text-align: center;
 	vertical-align: middle;
 }
+
+ul {
+	float: left;
+}
+	li {
+		float: left;
+		background-color: #222;
+		padding: 5px 19px;
+		margin: 5px 2px 5px 0px;
+		list-style: none;
+	}
+	li:hover, li:hover a {
+		background-color: #fff;
+		color:black;
+		text-decoration: none;
+	}
+	li a {
+		text-decoration: none;
+		color: white;
+		font-size: 21px;
+		font-style: italic;
+	}
+/*	li:nth-child(1) { border-radius: 4px 0px 0px 4px; margin-left: 1px;}
+	li:nth-child(3) { border-radius: 0px 4px 4px 0px;}
+*/	.active {
+		background-color: #1275ae;
+		color: white;
+		text-decoration: none;
+	}

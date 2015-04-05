@@ -7,10 +7,29 @@
 	    <script src="Js/Services/globalservices.js"></script>
 	    <script src="Js/Services/Dataservices.js"></script>
     	<script src="Js/Services/TimeService.js"></script>
-    	<script src="Js/Directives/timerDirective.js"></script>
     	<script src="test.js"></script>
 	</head>
 	<body ng-controller="testCtrl">
-		<span>{{Matches | json}}</span>
+		<!-- <span>{{upcomingMatches| json}}</span> -->
+
+		<ul ng-init="tab=1">
+			<li ng-class="{active:tab===1}"> 
+				<a href ng-click="tab = 1">Finished Matches</a>	
+			</li>
+			<li ng-class="{active:tab===2}"> 
+				<a href ng-click="tab = 2">Upcoming Matches</a> 
+			</li>
+		</ul>
+		<div class="clear"></div>
+		<div ng-show="tab === 1">
+			<div ng-repeat="match in finishedMatches">
+				{{match.Matchdate}} <br/>
+			</div>
+		</div>
+		<div ng-show="tab ===2 ">
+			<div ng-repeat="match in upcomingMatches">
+				{{match.Matchdate}} <br/>
+			</div>
+		</div>	
 	</body>
 </html>

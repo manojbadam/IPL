@@ -13,8 +13,27 @@
     	<script src="test2.js"></script>
 	</head>
 	<body ng-controller="testCtrl">
-		<div ng-repeat="match in matches">
-			<test-directive match="match" date="match.Matchdate" />
+		<div>
+			Logged in as - {{uname}}
+		</div>
+		<ul ng-init="tab=1">
+			<li ng-class="{active:tab===1}"> 
+				<a href ng-click="tab = 1">Finished Matches</a>	
+			</li>
+			<li ng-class="{active:tab===2}"> 
+				<a href ng-click="tab = 2">Upcoming Matches</a> 
+			</li>
+		</ul>
+		<div class="clear"></div>
+		<div ng-show="tab === 1">
+			<div ng-repeat="match in finishedMatches">
+				<test-directive match="match" date="match.Matchdate" />
+			</div>
+		</div>	
+		<div ng-show="tab ===2 ">
+			<div ng-repeat="match in upcomingMatches">
+				<test-directive match="match" date="match.Matchdate" />
+			</div>
 		</div>
 	</body>
 </html>		
